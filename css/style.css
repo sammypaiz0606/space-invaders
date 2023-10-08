@@ -18,8 +18,23 @@
 }
 
 .shooter {
-    background: red;
+    background: green;
 }
 .laser {
     background: orange;
+}
+
+.boom {
+    background: red;
+}
+
+#lastButton {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-top: 20px;
+}
+.buttonReset {
+    padding: 10px 20px;
+    background: green;
 }
