@@ -57,7 +57,45 @@ const alienInvaders = [
       }
       document.addEventListener('keydown', moveShooter)
 
-    function moveInvaders() {
+    // function move_img(str) {
+    //     var step=1; // change this to different step value
+    //     switch(str){
+    //     case "down":
+    //     var x=document.getElementById('i1').offsetTop;
+    //     x= x + step;
+    //     document.getElementById('i1').style.top= x + "px";
+    //     break;
+        
+    //     case "up":
+    //     var x=document.getElementById('i1').offsetTop;
+    //     x= x -step;
+    //     document.getElementById('i1').style.top= x + "px";
+    //     break;
+        
+    //     case "left":
+    //     var y=document.getElementById('i1').offsetLeft;
+    //     y= y - step;
+    //     document.getElementById('i1').style.left= y + "px";
+    //     break;
+        
+    //     case "right":
+    //     var y=document.getElementById('i1').offsetLeft;
+    //     y= y + step;
+    //     document.getElementById('i1').style.left= y + "px";
+    //     break;
+    //     }
+    //     }
+      
+      
+
+
+
+
+
+
+
+
+      function moveInvaders() {
         const leftEdge = alienInvaders[0] % width === 0;
         const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width -1;
         remove();
@@ -95,7 +133,7 @@ const alienInvaders = [
         }
     }
 
-    invadersId = setInterval(moveInvaders, 100);
+    invadersId = setInterval(moveInvaders, 300);
 
     function shoot(e) {
         let laserId;
@@ -127,3 +165,5 @@ const alienInvaders = [
     }
 
     document.addEventListener('keydown', shoot);
+    
+    // leftButton.addEventListener('click', shoot);

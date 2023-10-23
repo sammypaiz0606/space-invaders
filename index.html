@@ -22,8 +22,28 @@
 <body>
     <div class="container">
         <div class="results"></div>
-         <div class="grid"></div>
+         <div class="grid">
+            <div class="img">
+                <img src=images/spaceship.jpg id='i1' 
+         style="position:absolute; left: 200; top: 100;">
+            </div>
+         </div>
 
+         <!-- <div class="moveButton">
+            <div class="leftButton" value="left" onClick='move_left(left)' value="left">Left</div>
+            <div class="rightButton" value="right">Right</div>
+         </div> -->
+         
+         <div class="moveButton">
+            
+            <br><br><br><br>           
+            <input type=button class='move_left' onClick=move_img('left') value='Left'>
+            <input type=button class='move_right' onClick=move_img('right') value='right'>
+            <br>
+         </div>
+
+
+        
         <div id="lastButton">
             <button class="buttonReset" onclick="window.location.reload();">Play again</button>
         </div>
