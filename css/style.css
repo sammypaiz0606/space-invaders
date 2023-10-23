@@ -3,7 +3,7 @@
     font-family: monospace;
 }
 body {
-    background: darkgrey;
+    background: #000;
     
 }
 .container {
@@ -60,11 +60,15 @@ body {
     
 }
 .laser {
-    background: orange;
+    background: url('../images/bullet.jpg');
+    background-size: cover;
 }
 
 .boom {
-    background: red;
+    background: url('../images/boom.jpg');
+    background-size: cover;
+    width: 5px;
+    padding: 5px;
 }
 .moveButton {
     display: flex;
