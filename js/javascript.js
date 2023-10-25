@@ -41,50 +41,57 @@ const alienInvaders = [
         }
     }
 
-    squares[currentShooterIndex].classList.add('shooter');
+    // squares[currentShooterIndex].classList.add('shooter');
 
-    function moveShooter(e) {
-        squares[currentShooterIndex].classList.remove('shooter')
-        switch(e.key) {
-          case 'ArrowLeft':
-            if (currentShooterIndex % width !== 0) currentShooterIndex -=1
-            break
-          case 'ArrowRight' :
-            if (currentShooterIndex % width < width -1) currentShooterIndex +=1
-            break
+    // function moveShooter(e) {
+    //     squares[currentShooterIndex].classList.remove('shooter')
+    //     switch(e.key) {
+    //       case 'ArrowLeft':
+    //         if (currentShooterIndex % width !== 0) currentShooterIndex -=1
+    //         break
+    //       case 'ArrowRight' :
+    //         if (currentShooterIndex % width < width -1) currentShooterIndex +=1
+    //         break
+    //     }
+    //     squares[currentShooterIndex].classList.add('shooter')
+    //   }
+    //   document.addEventListener('keydown', moveShooter)
+
+    function move_img(str) {
+        var step=15; // change this to different step value
+        switch(str){
+        case "down": 
+        var x=document.getElementById('i1').offsetTop;
+        x= x + step;
+        document.getElementById('i1').style.top= x + "px";
+        break;
+        
+        case "up":
+        var x=document.getElementById('i1').offsetTop;
+        x= x -step;
+        document.getElementById('i1').style.top= x + "px";
+        break;
+        
+        case "left":
+        var y=document.querySelector('.shooter').offsetLeft;
+        y= y - step;
+        document.querySelector('.shooter').style.left= y + "px";
+        break;
+
+        case "right":
+        var y=document.querySelector('.shooter').offsetLeft;
+        y= y + step;
+        document.querySelector('.shooter').style.left= y + "px";
+        break;
+        
+        // case "right":
+        // var y=document.quertSelector('.shooter').offsetLeft;
+        // y= y + step;
+        // document.querySelector('.shooter').style.left= y + "px";
+        // console.log('hello');
+        // break;
         }
-        squares[currentShooterIndex].classList.add('shooter')
-      }
-      document.addEventListener('keydown', moveShooter)
-
-    // function move_img(str) {
-    //     var step=1; // change this to different step value
-    //     switch(str){
-    //     case "down":
-    //     var x=document.getElementById('i1').offsetTop;
-    //     x= x + step;
-    //     document.getElementById('i1').style.top= x + "px";
-    //     break;
-        
-    //     case "up":
-    //     var x=document.getElementById('i1').offsetTop;
-    //     x= x -step;
-    //     document.getElementById('i1').style.top= x + "px";
-    //     break;
-        
-    //     case "left":
-    //     var y=document.getElementById('i1').offsetLeft;
-    //     y= y - step;
-    //     document.getElementById('i1').style.left= y + "px";
-    //     break;
-        
-    //     case "right":
-    //     var y=document.getElementById('i1').offsetLeft;
-    //     y= y + step;
-    //     document.getElementById('i1').style.left= y + "px";
-    //     break;
-    //     }
-    //     }
+        }
       
       
 

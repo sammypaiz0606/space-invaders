@@ -50,10 +50,18 @@ body {
     background-size: cover;
     border-radius: 10px;
 }
-
+/* .shooterWrap {
+    position: flex;
+    justify-content: center;
+    text-align: center;
+} */
 .shooter {
     width:40px;
     height:40px;
+   
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
     background: url('../images/spaceship.jpg');
     background-size: cover;
 
